@@ -21,12 +21,12 @@ public class ApplicationController {
 	}	
 	
 	@RequestMapping(value = "/aboutme", method = RequestMethod.GET)
-	public String getAboutMe(Locale locale, Model model) {
+	public String getAboutMe(Model model) {
 		return "aboutme";
 	}
 	
 	@RequestMapping(value = "/contact", method = RequestMethod.GET)
-	public String getContact(Locale locale, Model model) {
+	public String getContact(Model model) {
 		return "contact";
 	}
 }

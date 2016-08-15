@@ -38,8 +38,10 @@ repositories {
 
 // In this section you declare the dependencies for your production and test code
 dependencies {
-	compile('org.springframework.boot:spring-boot-starter-security')
 	compile('org.springframework.boot:spring-boot-starter-web')
- 
+	compile('org.springframework.boot:spring-boot-starter-security')
+	compile group: 'javax.servlet', name: 'jstl', version: '1.2'
+ 	//Required dependency for JSP
+    providedRuntime 'org.apache.tomcat.embed:tomcat-embed-jasper'
     testCompile("junit:junit:4.7") 
 }
