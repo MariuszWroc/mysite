@@ -24,7 +24,8 @@ apply plugin: 'spring-boot'
 apply plugin: 'war'
 apply plugin: 'jetty'
 
-jar {
+
+war {
 	baseName = 'mysite'
 	version = '0.0.1-SNAPSHOT'
 }
@@ -40,8 +41,12 @@ repositories {
 dependencies {
 	compile('org.springframework.boot:spring-boot-starter-web')
 	compile('org.springframework.boot:spring-boot-starter-security')
-	compile group: 'javax.servlet', name: 'jstl', version: '1.2'
+	// REST
+	compile("org.springframework.boot:spring-boot-starter-actuator")
+    compile("org.springframework.boot:spring-boot-starter-mail")
+	compile("javax.servlet:jstl:1.2")
  	//Required dependency for JSP
     providedRuntime 'org.apache.tomcat.embed:tomcat-embed-jasper'
     testCompile("junit:junit:4.7") 
 }
+
