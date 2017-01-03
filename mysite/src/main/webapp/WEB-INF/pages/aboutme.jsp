@@ -10,6 +10,6 @@
 		<meta name="viewport" content="initial-scale=1" />
 	</head>
 	<body layout="column">
-	test
+	about
 	</body>
 </html>

@@ -20,13 +20,28 @@ public class ApplicationController {
 		return "home";
 	}	
 	
-	@RequestMapping(value = "/aboutme", method = RequestMethod.GET)
-	public String getAboutMe(Model model) {
-		return "aboutme";
+	@RequestMapping(value = "/about", method = RequestMethod.GET)
+	public String getAbout() {
+		return "about";
 	}
 	
 	@RequestMapping(value = "/contact", method = RequestMethod.GET)
-	public String getContact(Model model) {
-		return "contact";
+	public String getContact() {
+		return "main/contact";
 	}
+	
+    @RequestMapping(value = {"/header"}, method = RequestMethod.GET)
+    public String getHeaderTemplate() {
+        return "template/header";
+    }
+    
+    @RequestMapping(value = {"/left"}, method = RequestMethod.GET)
+    public String getContentTemplate() {
+        return "template/left";
+    }
+    
+    @RequestMapping(value = {"/footer"}, method = RequestMethod.GET)
+    public String getFooterTemplate() {
+        return "template/footer";
+    }
 }
